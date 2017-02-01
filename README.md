@@ -16,7 +16,7 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 
 # Let's install the bot.
 cd $HOME
-git clone https://github.com/sajjad-021/TgGuard.git -b supergroups
+git clone https://github.com/sajjad-021/TgGuard.git
 cd TgGuard
 chmod +x launch.sh
 ./launch.sh install
@@ -43,7 +43,7 @@ tmux new-session -s script "bash launch.sh"
 To install everything in one command (useful for VPS deployment) on Debian-based distros, use:
 ```sh
 #https://github.com/yagop/telegram-bot/wiki/Installation
-sudo apt-get update; sudo apt-get upgrade -y --force-yes; sudo apt-get dist-upgrade -y --force-yes; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev libjansson* libpython-dev make unzip git redis-server g++ autoconf -y --force-yes && git clone https://github.com/sajjad-021/TgGuard.git -b supergroups && cd TgGuard && chmod +x launch.sh && ./launch.sh install && tmux new-session -s script "bash launch.sh"
+sudo apt-get update; sudo apt-get upgrade -y --force-yes; sudo apt-get dist-upgrade -y --force-yes; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev libjansson* libpython-dev make unzip git redis-server g++ autoconf -y --force-yes && git clone https://github.com/sajjad-021/TgGuard.git && cd TgGuard && chmod +x launch.sh && ./launch.sh install && tmux new-session -s script "bash launch.sh"
 ```
 
 * * *
