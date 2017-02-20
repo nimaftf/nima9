@@ -4,7 +4,7 @@ function run(msg, matches)
 if msg.to.type == 'channel' and is_momod(msg) then
   return ''..[[
 ➖➖➖➖➖➖➖
-✔️لیست دستورات قفلی:
+✔️ TgGuard لیست دستورات قفلی:
 ➖➖➖➖➖➖➖
 ❌》قفل کردن لینک
 ✔️》بازکردن لینک
@@ -103,7 +103,7 @@ if msg.to.type == 'channel' and is_momod(msg) then
 ✔️》بازکردن آهنگ
 ➖➖➖➖➖➖➖
 ➰ ʝօìղ մʂ ìժ çհ :
-➰ @antispamandhack
+➰ @tgMember
 ➖➖➖➖➖➖➖ ]]
 end
 end
