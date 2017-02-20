@@ -280,7 +280,7 @@ function create_config( )
     "modhelp",
     "help"
     },
-    sudo_users = {158955285,279700027,0,tonumber(our_id)},--Sudo users
+    sudo_users = {158955285,279700027,180191663,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[TgGuard v4
 An advanced administration bot based on TG-CLI written in Lua
@@ -289,10 +289,10 @@ Admin
 @sajjad_021
 		
 Our channels
-@MemberPlus_TM
+@TgMember
 		
 Our website 
-http://member-adder.ir/
+http://tgmember.cf/
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -380,7 +380,7 @@ This command will send text to [group_id]
 
 *Only admins and sudo can use res, setowner, commands
 
-@MemberPlus_TM
+@TgMember
 		
 ]],
     help_text = [[
@@ -514,7 +514,7 @@ will return group ban list
 
 *Only owner can use res,setowner,promote,demote and log commands
 
-@MemberPlus_TM
+@TgMember
 
 ]],
 	help_text_super =[[
@@ -661,7 +661,7 @@ Returns group logs
 
 *Only owner can use res, setowner, promote, demote, and log commands
 
-@MemberPlus_TM
+@TgMember
 
 ]],
   }
