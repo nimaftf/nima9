@@ -1,6 +1,7 @@
 ﻿local datebase = {
-"انلاینم ジ",
-""
+"نزن لامصب انلاینم 😐❤️ ",
+   "جاکش انلاینم دیه گاییدی 😐❤️ ",
+   "افلاین نگاییدم 😐❤️ ",
   }
 local function run(msg, matches) 
  send_document(get_receiver(msg), "/root/TeleSeed/data/sticker.webp", ok_cb, false)
@@ -18,11 +19,11 @@ return {
   },
   run = run
 }
---[[
+
 #
 #
-#                 @Hell_Bot_channel
+#                 @TgGuard
 #               
-#                  @H_e_ll_B_O_Y
+#                  @tgMember
 #
 ]]
