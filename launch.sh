@@ -6,18 +6,30 @@ cd $THIS_DIR
 update() {
   git pull
   git submodule update --init --recursive
+  install_rocks
 }
 
-install() {
-  git pull
-  git submodule update --init --recursive
-  patch -i "patches/disable-python-and-libjansson.patch" -p 0 --batch --forward
-  RET=$?;
+# Will install luarocks on THIS_DIR/.luarocks
+install_luarocks() {
+  git clone https://github.com/keplerproject/luarocks.git
+  cd luarocks
+  git checkout tags/v2.2.1 # Current stable
 
-  RET=$?; if [ $RET -ne 0 ]; then
-    echo "Error. Exiting."; exit $RET;
+  PREFIX="$THIS_DIR/.luarocks"
+
+  ./configure --prefix=$PREFIX --sysconfdir=$PREFIX/luarocks --force-config
+
+  RET=$?; if [ $RET -ne 0 ];
+    then echo "Error. Exiting."; exit $RET;
   fi
+
+  make build && make install
+  RET=$?; if [ $RET -ne 0 ];
+    then echo "Error. Exiting.";exit $RET;
+  fi
+
   cd ..
+  rm -rf luarocks
 }
 
 install_rocks() {
@@ -113,6 +125,6 @@ else
     echo "Run $0 install"
     exit 1
   fi
-  rm -r ../.telegram-cli/state #Prevent tg from crash
+
   ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./bot/seedbot.lua -l 1 -E $@
 fi
