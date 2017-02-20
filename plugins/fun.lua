@@ -627,7 +627,7 @@ if matches[1] == "mobile"or matches[1] == 'جدیدترین موبایل ها'  
 local pass = 'dram1135' 
 local url = 'http://api.avirateam.ir/mobile/cli/index.php?pass='..pass 
   local req = http.request(url) 
-  return req..' @antispamandhack' 
+  return req..' @tgMember' 
 end 
 -------------------- 
 if matches[1] == "alexa"  then 
